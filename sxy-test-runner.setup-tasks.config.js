@@ -1,0 +1,45 @@
+export default {
+
+    // base folder for tests matching and ignore patterns
+    testsBase: 'dist/testing',
+
+    // glob pattern or array of glob patterns of test files
+    tests: [
+        '**/*.test.{js,mjs,jsx}'
+    ],
+
+    // glob pattern or array of patterns of test files to ignore
+    testsIgnore: ['**/node_modules/**/*'],
+
+    // function to run on startup
+    setup: [
+        function setup() {
+            global.configBasedSetupFunctionRan = true
+        },
+        'unitTesting/setupFiles/watchSetup.js'
+    ],
+
+    // function to run after test run
+    teardown: undefined,
+
+    // watch mode configurations
+    watch: {
+
+        //// the base directory to watch files in
+        watchFilesBase: 'dist/testing',
+
+        //// glob filter or array of global filters of files to watch
+        watchFiles: '**/*.js',
+
+        //// glob filter or array of globl filters of files to ignore
+        watchFilesIgnore: ['**/node_modules/**/*', 'sxyCache/**/*'],
+
+        // run all tests when starting the watcher
+        runAllOnStartup: false,
+    
+        // re run all previously failed tests on each test run, until they pass
+        reRunFailingTests: true,
+
+    },
+
+}

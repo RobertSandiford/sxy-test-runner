@@ -1,0 +1,2 @@
+
+global.afterEachTestFileHasRun = true

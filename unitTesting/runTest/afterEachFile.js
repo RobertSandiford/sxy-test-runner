@@ -1,0 +1,2 @@
+
+global.afterEachFileFileHasRun = true
