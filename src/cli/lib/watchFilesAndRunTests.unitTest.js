@@ -12,7 +12,7 @@ import { applyConfigDefaults } from './applyConfigDefaults.js'
 
 mochaDescribe('watchFilesAndRunTests() function', function() {
 
-    const tempFolder = 'temp/watchFilesAndRunTests'
+    const tempFolder = 'watchTests/watchFilesAndRunTests'
     const baseConfig = applyConfigDefaults({
         testsBase: tempFolder,
         tests: '**/*.test.js',

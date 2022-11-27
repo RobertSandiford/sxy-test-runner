@@ -12,7 +12,7 @@ import { applyConfigDefaults } from './applyConfigDefaults.js'
 
 mochaDescribe('watchFilesAndRunTestsChokidar() function', function() {
     
-    const tempFolder = 'temp/watchFilesAndRunTestsChokidar'
+    const tempFolder = 'watchTests/watchFilesAndRunTestsChokidar'
 
     const baseConfig = applyConfigDefaults({
         testsBase: tempFolder,
@@ -39,7 +39,7 @@ mochaDescribe('watchFilesAndRunTestsChokidar() function', function() {
             outBuffer += texts.join(' ') + '\n' // join and save to the buffer
         })
 
-        const testFileName = 'temp/watchFilesAndRunTestsChokidar/a.test.js'
+        const testFileName = 'watchTests/watchFilesAndRunTestsChokidar/a.test.js'
         const thing = 'Sample test 1'
         const should = '1 should equal 1'
 

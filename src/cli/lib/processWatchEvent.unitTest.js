@@ -8,7 +8,7 @@
 
 //     mochaIt('identifies a test in a watch event', function() {
 
-//         processWatchEvent('temp/a.test.js', 'update')
+//         processWatchEvent('watchTests/a.test.js', 'update')
 
 //     })
 

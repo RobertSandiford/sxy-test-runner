@@ -20,7 +20,7 @@ mochaDescribe('watchFilesNodeWatch() function', function() {
             eventComplete = true
         } )
 
-        fs.writeFile('temp/watchFiles-file.js', 'abc')
+        fs.writeFile('watchTests/watchFiles-file.js', 'abc')
 
         await new Promise( (resolve, reject) => {
             const interval = setInterval(
@@ -41,7 +41,7 @@ mochaDescribe('watchFilesNodeWatch() function', function() {
     mochaIt('should call back when when a file change occurs in specified folder', async function() {
 
         //this.timeout(100000)
-        const tempFolder = 'temp/watchFilesNodeWatcher'
+        const tempFolder = 'watchTests/watchFilesNodeWatcher'
 
         const config = applyConfigDefaults({
             watch: {

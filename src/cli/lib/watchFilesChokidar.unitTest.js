@@ -19,7 +19,7 @@ mochaDescribe('watchFilesChokidar() function', function() {
             eventComplete = true
         } )
 
-        fs.writeFile('temp/watchFilesChokidar-file.js', 'abc')
+        fs.writeFile('watchTests/watchFilesChokidar-file.js', 'abc')
 
         await new Promise( (resolve, reject) => {
             const interval = setInterval(
@@ -43,7 +43,7 @@ mochaDescribe('watchFilesChokidar() function', function() {
 
         const config = applyConfigDefaults({
             watch: {
-                watchFilesBase: 'temp/watchFilesChokidar',
+                watchFilesBase: 'watchTests/watchFilesChokidar',
                 watchFiles: '**/*.js',
             }
         })
@@ -54,7 +54,7 @@ mochaDescribe('watchFilesChokidar() function', function() {
             eventComplete = true
         } )
 
-        fs.writeFile('temp/watchFilesChokidar/a-file.js', 'abc')
+        fs.writeFile('watchTests/watchFilesChokidar/a-file.js', 'abc')
 
         await new Promise( (resolve, reject) => {
             const interval = setInterval(
@@ -77,7 +77,7 @@ mochaDescribe('watchFilesChokidar() function', function() {
 
         const config = applyConfigDefaults({
             watch: {
-                watchFilesBase: 'temp/watchFilesChokidar',
+                watchFilesBase: 'watchTests/watchFilesChokidar',
                 watchFiles: '**/*.js',
                 watchFilesIgnore: 'ignore-file.js'
             }
@@ -89,7 +89,7 @@ mochaDescribe('watchFilesChokidar() function', function() {
             eventComplete = true
         } )
 
-        fs.writeFile('temp/watchFilesChokidar/ignore-file.js', 'abc')
+        fs.writeFile('watchTests/watchFilesChokidar/ignore-file.js', 'abc')
 
         await new Promise( (resolve, reject) => {
             setTimeout(resolve, 1000)
@@ -105,7 +105,7 @@ mochaDescribe('watchFilesChokidar() function', function() {
 
         const config = applyConfigDefaults({
             watch: {
-                watchFilesBase: 'temp/watchFilesChokidar',
+                watchFilesBase: 'watchTests/watchFilesChokidar',
                 watchFiles: '**/*.js',
                 watchFilesIgnore: ['first-ignore-file.js', 'ignore-file.js']
             }
@@ -117,7 +117,7 @@ mochaDescribe('watchFilesChokidar() function', function() {
             eventComplete = true
         } )
 
-        fs.writeFile('temp/watchFilesChokidar/ignore-file.js', 'abc')
+        fs.writeFile('watchTests/watchFilesChokidar/ignore-file.js', 'abc')
 
         await new Promise( (resolve, reject) => {
             setTimeout(resolve, 1000)
