@@ -203,4 +203,4 @@ describe('something', ({it, beforeEachTest, afterEachTest, afterDescribe}) => {
 
 # Known issues
 
-sxy-loader uses eval to load and re-load modules, and this makes a big mess of error output. I am hoping for a solution to module reloading in the official spec to solve this. It may be possible to switch to a different method of re-loading modules to solve this (no plans for this just now).
+sxy-loader effectively uses eval to run modules, to get around the ESM limited of being unable to reload modules. This has a harmful effect on error reporting when code hits errors. I have some plans to work on error reporting, or work to get changes made to the ESM spec, but at current time error reporting isn't great.
