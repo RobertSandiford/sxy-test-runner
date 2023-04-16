@@ -1,12 +1,21 @@
 {
     "name": "sxy-test-runner",
-    "version": "1.0.17",
+    "version": "1.0.18",
     "license": "MIT",
     "homepage": "https://github.com/RobertSandiford/sxy-test-runner",
     "repository": {
         "type": "git",
         "url": "https://github.com/RobertSandiford/sxy-test-runner"
     },
+    "keywords": [
+        "ES Modules",
+        "ES6 Modules",
+        "Test Runner",
+        "Test Framework",
+        "Testing",
+        "Unit Testing",
+        "Automated Tests"
+    ],
     "type": "module",
     "main": "./dist/index.js",
     "module": "./dist/index.js",
